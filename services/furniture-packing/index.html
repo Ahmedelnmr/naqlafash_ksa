@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18475044800"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18475236309"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'AW-18475044800');
     gtag('config', 'AW-18475236309');
+    gtag('config', 'AW-18475044800');
   </script>
-    <!-- Event snippet for Contact conversion page -->
+  <!-- Event snippet for Contact conversion page -->
   <script>
   function gtag_report_conversion(url) {
     var callback = function () {
-      if (typeof(url) != 'undefined' && url) {
-        if (url.indexOf('wa.me') !== -1 || url.indexOf('whatsapp') !== -1) {
-          // Handled immediately below
-        } else {
-          window.location = url;
-        }
+      if (typeof url !== 'undefined' && url &&
+          url.indexOf('wa.me') === -1 && url.indexOf('whatsapp') === -1) {
+        window.location = url;
       }
     };
     if (typeof gtag === 'function') {
       gtag('event', 'conversion', {
-          'send_to': 'AW-18475236309/doPhCIW14IYdENX31ulE',
-          'value': 1.0,
-          'currency': 'EGP',
-          'event_callback': callback
+        'send_to': 'AW-18475236309/doPhCIW14IYdENX31ulE',
+        'value': 1.0,
+        'currency': 'EGP',
+        'event_callback': callback
       });
     }
     if (url && (url.indexOf('wa.me') !== -1 || url.indexOf('whatsapp') !== -1)) {
@@ -42,7 +38,6 @@
     return false;
   }
   </script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تغليف الأثاث للنقل | شركة نقل عفش بجدة ومكة</title>
