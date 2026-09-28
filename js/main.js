@@ -159,6 +159,28 @@
     return value.replace(/[<>]/g, '');
   }
 
+  // --- Google Ads Conversion Tracking Fallback ---
+  if (typeof window.gtag_report_conversion !== 'function') {
+    window.gtag_report_conversion = function (url) {
+      var callback = function () {
+        if (typeof url !== 'undefined' && url) {
+          window.location = url;
+        }
+      };
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18475236309/doPhCIW14IYdENX31ulE',
+          'value': 1.0,
+          'currency': 'EGP',
+          'event_callback': callback
+        });
+      } else {
+        callback();
+      }
+      return false;
+    };
+  }
+
   // --- Conversion Tracking Helpers ---
   // These functions fire events that can be picked up by GTM / GA4 / Google Ads
   window.trackEvent = function (eventName, params) {
