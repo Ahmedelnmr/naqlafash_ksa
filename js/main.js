@@ -164,7 +164,11 @@
     window.gtag_report_conversion = function (url) {
       var callback = function () {
         if (typeof url !== 'undefined' && url) {
-          window.location = url;
+          if (url.indexOf('wa.me') !== -1 || url.indexOf('whatsapp') !== -1) {
+            // Handled immediately below
+          } else {
+            window.location = url;
+          }
         }
       };
       if (typeof gtag === 'function') {
@@ -174,8 +178,14 @@
           'currency': 'EGP',
           'event_callback': callback
         });
-      } else {
-        callback();
+      }
+      if (url && (url.indexOf('wa.me') !== -1 || url.indexOf('whatsapp') !== -1)) {
+        window.open(url, '_blank');
+        return false;
+      }
+      if (url && url.indexOf('tel:') === 0) {
+        window.location.href = url;
+        return false;
       }
       return false;
     };
