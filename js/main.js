@@ -1,5 +1,5 @@
 /**
- * شركة نقل عفش بجدة ومكة — Main JavaScript
+ * شركة نقل عفش بجدة — Main JavaScript
  * Handles: Navigation, FAQ accordion, Form validation, Scroll effects, Event tracking
  */
 
@@ -171,7 +171,7 @@
         gtag('event', 'conversion', {
           'send_to': 'AW-18475236309/doPhCIW14IYdENX31ulE',
           'value': 1.0,
-          'currency': 'EGP',
+          'currency': 'SAR',
           'event_callback': callback
         });
       }

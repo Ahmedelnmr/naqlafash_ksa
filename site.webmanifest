@@ -1,7 +1,7 @@
 {
-  "name": "شركة نقل عفش بجدة ومكة",
-  "short_name": "نقل عفش",
-  "description": "خدمات نقل العفش والأثاث في جدة ومكة المكرمة",
+  "name": "شركة نقل عفش بجدة",
+  "short_name": "نقل عفش جدة",
+  "description": "خدمات نقل العفش والأثاث في جدة مع التغليف والفك والتركيب",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fafaf8",

@@ -1,5 +1,5 @@
 /* ============================================
-   شركة نقل عفش بجدة ومكة — Design System
+   شركة نقل عفش بجدة — Design System
    Professional Local Service Business
    ============================================ */
 
@@ -639,7 +639,7 @@ p:last-child {
   }
 }
 
-/* --- City Section (Jeddah / Makkah on homepage) --- */
+/* --- City Section (Jeddah on homepage) --- */
 .city-block {
   display: grid;
   grid-template-columns: 1fr;
