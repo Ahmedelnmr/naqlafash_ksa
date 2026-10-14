@@ -372,7 +372,13 @@ p:last-child {
 .header__nav-list {
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
+  gap: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .header__nav-list {
+    gap: 1.4rem;
+  }
 }
 
 .header__nav-link {

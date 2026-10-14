@@ -28,6 +28,23 @@
     });
   }
 
+  // Smooth scroll for hash links on home page
+  if (window.location.pathname === '/' || window.location.pathname === '' || window.location.pathname === '/index.html') {
+    document.querySelectorAll('a[href^="/#"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var targetId = this.getAttribute('href').replace(/^\/#/, '');
+        var targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth' });
+          if (history.pushState) {
+            history.pushState(null, null, '#' + targetId);
+          }
+        }
+      });
+    });
+  }
+
   // --- Header scroll effect ---
   const header = document.querySelector('.site-header');
   if (header) {
